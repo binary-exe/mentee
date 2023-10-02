@@ -65,7 +65,11 @@ def create_app():
     db = os.environ.get("MONGO_DB")
     host = os.environ.get("MONGO_HOST")
     app.config["MONGODB_SETTINGS"] = {"db": db, "host": host % (user, password, db)}
-
+    # app.config["MONGODB_SETTINGS"] = {
+    #     "db": "mentee",
+    #     "host": "localhost",
+    #     "port": 27017,
+    # }
     # firebase
     if not firebase_admin._apps:
         firebase_admin.initialize_app()
@@ -94,7 +98,7 @@ def create_app():
         admin_notifications,
         masters,
         translation,
-        events
+        events,
     )
 
     # why blueprints http://flask.pocoo.org/docs/1.0/blueprints/
