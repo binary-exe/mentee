@@ -49,6 +49,16 @@ def get_events(role):
     return create_response(data={"events": result})
 
 
+@event.route("event/<string:id>", methods=["GET"])
+def get_event_by_id(id):
+    try:
+        event = Event.objects.get(id=id)
+    except:
+        return create_response(status=422, message="event not found")
+
+    return create_response(data={"event": event})
+
+
 @event.route("events/delete/<string:id>", methods=["DELETE"])
 def delete_train(id):
     try:
