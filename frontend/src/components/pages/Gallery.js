@@ -361,11 +361,8 @@ function Gallery() {
                   mentor.specializations,
                   options.specializations
                 )}
-                website={mentor.website}
-                linkedin={mentor.linkedin}
                 video={mentor.video}
                 id={mentor._id["$oid"]}
-                firebase_uid={mentor.firebase_uid}
                 lesson_types={getLessonTypes(
                   mentor.offers_group_appointments,
                   mentor.offers_in_person
