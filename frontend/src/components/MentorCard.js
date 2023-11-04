@@ -140,32 +140,6 @@ function MentorCard(props) {
             {truncate(props.specializations.join(", "), 60)}
           </Paragraph>
         </Typography>
-        {/* {props.website && (
-          <h4 className="gallery-info-section">
-            <LinkOutlined style={styles.icon} />
-            <a
-              className="gallery-links"
-              href={formatLinkForHref(props.website)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {props.website}
-            </a>
-          </h4>
-        )}
-        {props.linkedin && (
-          <h4 className="gallery-info-section">
-            <LinkedinOutlined style={styles.icon} />
-            <a
-              className="gallery-links"
-              href={formatLinkForHref(props.linkedin)}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {t("commonProfile.linkedin")}
-            </a>
-          </h4>
-        )} */}
         {props.video && props.video.url && (
           <h4 className="gallery-info-section">
             <YoutubeOutlined style={styles.icon} />

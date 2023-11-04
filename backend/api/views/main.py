@@ -50,7 +50,19 @@ main = Blueprint("main", __name__)  # initialize blueprint
 def get_accounts(account_type):
     accounts = None
     if account_type == Account.MENTOR:
-        mentors_data = MentorProfile.objects().exclude("availability", "videos")
+        mentors_data = MentorProfile.objects().exclude(
+            "availability",
+            "videos",
+            "firebase_uid",
+            "linkedin",
+            "website",
+            "education",
+            "biography",
+            "taking_appointments",
+            "text_notifications",
+            "email_notifications",
+            "email",
+        )
         for account in mentors_data:
             target = {"id": str(account.id), "name": account.name}
             pair_partner = PartnerProfile.objects(assign_mentors__in=[target]).first()
