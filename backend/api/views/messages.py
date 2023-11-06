@@ -147,10 +147,12 @@ def contact_mentor(mentor_id):
         },
         template_id=MENTOR_CONTACT_ME,
     )
+    email_sent_status = ""
     if not res:
         msg = "Failed to send mentee email " + res_msg
         logger.info(msg)
-        return create_response(status=500, message="Failed to send message")
+        # return create_response(status=500, message="Failed to send message")
+        email_sent_status = ", But failed to send message"
 
     try:
         message = DirectMessage(
@@ -173,7 +175,9 @@ def contact_mentor(mentor_id):
         logger.info(msg)
         return create_response(status=422, message=msg)
 
-    return create_response(status=200, message="successfully sent email message")
+    return create_response(
+        status=200, message="successfully sent email message" + email_sent_status
+    )
 
 
 @messages.route("/contacts/<string:user_id>", methods=["GET"])
