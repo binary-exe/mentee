@@ -478,9 +478,9 @@ def edit_mentor(id):
     account = None
     try:
         authorized, response = verify_user(account_type)
-        if (not authorized) :
+        if not authorized:
             return response
-        
+
         if account_type == Account.MENTEE:
             account = MenteeProfile.objects.get(id=id)
         elif account_type == Account.MENTOR:
@@ -522,9 +522,9 @@ def uploadImage(id):
 
     try:
         authorized, response = verify_user(account_type)
-        if (not authorized) :
+        if not authorized:
             return response
-        
+
         if account_type == Account.MENTEE:
             account = MenteeProfile.objects.get(id=id)
         elif account_type == Account.MENTOR:
