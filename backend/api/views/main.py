@@ -1,3 +1,4 @@
+from ast import Not
 from flask import Blueprint, request
 from sqlalchemy import true
 from datetime import datetime
@@ -37,7 +38,7 @@ from api.utils.request_utils import (
 from api.utils.constants import NEW_APPLICATION_STATUS
 from api.utils.profile_parse import new_profile, edit_profile
 from api.utils.constants import Account
-from api.utils.require_auth import all_users, mentee_only
+from api.utils.require_auth import all_users, mentee_only, verify_user
 from firebase_admin import auth as firebase_admin_auth
 
 
@@ -476,6 +477,10 @@ def edit_mentor(id):
     # Try to retrieve account profile from database
     account = None
     try:
+        authorized, response = verify_user(account_type)
+        if not authorized:
+            return response
+
         if account_type == Account.MENTEE:
             account = MenteeProfile.objects.get(id=id)
         elif account_type == Account.MENTOR:
@@ -516,6 +521,10 @@ def uploadImage(id):
     account = None
 
     try:
+        authorized, response = verify_user(account_type)
+        if not authorized:
+            return response
+
         if account_type == Account.MENTEE:
             account = MenteeProfile.objects.get(id=id)
         elif account_type == Account.MENTOR:
