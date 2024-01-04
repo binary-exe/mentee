@@ -3,7 +3,6 @@ venv
 node_modules
 backend/firebase_service_key.json
 package-lock.json
-package.json
 yarn.lock
 heroku-logs-prod.txt
 heroku-logs.txt
@@ -14,3 +13,5 @@ pyproject.toml000
 .DS_Store
 app.log
 backend/app.log
+tests/.env
+tests/cypress/screenshots/
