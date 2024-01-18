@@ -153,9 +153,19 @@ const TrainingList = (props) => {
       .then((trains) => {
         setTrainingData(trains);
         setLoading(false);
+        setFlag(!flag);
       })
       .catch((e) => console.error(e));
-  }, [i18n.language]);
+
+    setTimeout(() => {
+      setTrainingStatus(
+        props.applicationData.traingStatus
+          ? props.applicationData.traingStatus
+          : {}
+      );
+    }, 800);
+  }, [i18n.language, props.applicationData]);
+
   return (
     <List
       itemLayout="vertical"
