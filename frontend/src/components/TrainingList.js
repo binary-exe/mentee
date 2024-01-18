@@ -156,16 +156,17 @@ const TrainingList = (props) => {
         setFlag(!flag);
       })
       .catch((e) => console.error(e));
+  }, [i18n.language]);
 
+  useEffect(() => {
     setTimeout(() => {
       setTrainingStatus(
         props.applicationData.traingStatus
           ? props.applicationData.traingStatus
           : {}
       );
-    }, 800);
-  }, [i18n.language, props.applicationData]);
-
+    }, 1500);
+  }, [props.applicationData]);
   return (
     <List
       itemLayout="vertical"
