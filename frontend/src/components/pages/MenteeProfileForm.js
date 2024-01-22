@@ -66,7 +66,17 @@ function MenteeProfileForm({
   }, [profileData, form, resetFields]);
 
   const educationSubForm = () => (
-    <Form.List name="education">
+    <Form.List
+      name="education"
+      initialValue={[
+        {
+          school: "",
+          graduation_year: "",
+          majors: undefined,
+          education_level: "",
+        },
+      ]}
+    >
       {(fields, { add, remove }) => (
         <>
           {fields.map(({ key, name, ...restField }) => (
@@ -82,7 +92,11 @@ function MenteeProfileForm({
                   {...restField}
                   label={t("commonProfile.school")}
                   name={[name, "school"]}
-                  required
+                  rules={[
+                    {
+                      required: true,
+                    },
+                  ]}
                 >
                   <Input />
                 </Form.Item>
@@ -91,7 +105,11 @@ function MenteeProfileForm({
                   {...restField}
                   name={[name, "graduation_year"]}
                   label={t("commonProfile.graduationYear")}
-                  required
+                  rules={[
+                    {
+                      required: true,
+                    },
+                  ]}
                 >
                   <Input type="number" />
                 </Form.Item>
@@ -102,7 +120,11 @@ function MenteeProfileForm({
                   className={styles.formGroupItem}
                   name={[name, "majors"]}
                   label={t("commonProfile.majors")}
-                  required
+                  rules={[
+                    {
+                      required: true,
+                    },
+                  ]}
                 >
                   <Select
                     placeholder={t("commonProfile.majorsExamples")}
@@ -116,18 +138,24 @@ function MenteeProfileForm({
                   name={[name, "education_level"]}
                   className={styles.formGroupItem}
                   label={t("commonProfile.degree")}
-                  required
+                  rules={[
+                    {
+                      required: true,
+                    },
+                  ]}
                 >
                   <Input placeholder={t("commonProfile.degreeExample")} />
                 </Form.Item>
               </div>
-              <DeleteOutlined
-                onClick={() => remove(name)}
-                className={css`
-                  float: right;
-                  color: #ff4d4f;
-                `}
-              />
+              {key !== 0 && (
+                <DeleteOutlined
+                  onClick={() => remove(name)}
+                  className={css`
+                    float: right;
+                    color: #ff4d4f;
+                  `}
+                />
+              )}
               <Divider />
             </div>
           ))}

@@ -357,10 +357,7 @@ function Gallery() {
                 )}
                 professional_title={mentor.professional_title}
                 location={mentor.location}
-                specializations={getTranslatedOptions(
-                  mentor.specializations,
-                  options.specializations
-                )}
+                specializations={mentor.specializations}
                 video={mentor.video}
                 id={mentor._id["$oid"]}
                 lesson_types={getLessonTypes(

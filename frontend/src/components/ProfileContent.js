@@ -90,12 +90,14 @@ function ProfileContent(props) {
   };
 
   const getTags = (tags) => {
-    tags = getTranslatedOptions(
-      tags,
-      accountType === ACCOUNT_TYPE.PARTNER
-        ? getRegions(t)
-        : options.specializations
-    );
+    if (accountType === ACCOUNT_TYPE.PARTNER) {
+      tags = getTranslatedOptions(
+        tags,
+        accountType === ACCOUNT_TYPE.PARTNER
+          ? getRegions(t)
+          : options.specializations
+      );
+    }
     return tags.map((tag, idx) => (
       <div className="mentor-specialization-tag" key={idx}>
         {tag}
@@ -110,7 +112,7 @@ function ProfileContent(props) {
         <div className="mentor-profile-heading">
           <b>
             {ACCOUNT_TYPE.MENTOR === accountType
-              ? t("mentorProfile.specializations")
+              ? t("common.specializations")
               : ACCOUNT_TYPE.MENTEE === accountType
               ? t("menteeProfile.areasOfInterest")
               : t("partnerProfile.regionsWork")}
