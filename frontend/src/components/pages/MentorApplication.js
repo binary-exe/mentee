@@ -63,6 +63,8 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredFirstName"),
+
             },
           ]}
         >
@@ -74,6 +76,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredLasttName"),
             },
           ]}
         >
@@ -98,6 +101,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredHearAboutUs"),
             },
           ]}
         >
@@ -109,6 +113,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredKnowledgeLocation"),
             },
           ]}
         >
@@ -123,6 +128,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredPreviousLocations"),
             },
           ]}
         >
@@ -137,6 +143,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredEmployerName"),
             },
           ]}
         >
@@ -148,6 +155,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredJobDescription"),
             },
           ]}
         >
@@ -159,6 +167,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredJobDuration"),
             },
           ]}
         >
@@ -193,6 +202,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredCommitDuration"),
             },
           ]}
         >
@@ -219,6 +229,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredImmigrationStatus"),
             },
           ]}
         >
@@ -233,6 +244,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredCommunityStatus"),
             },
           ]}
         >
@@ -247,6 +259,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredEconomicBackground"),
             },
           ]}
         >
@@ -261,6 +274,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredIsPersonOfColor"),
             },
           ]}
         >
@@ -275,6 +289,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredGenderIdentification"),
             },
           ]}
         >
@@ -305,6 +320,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredIsMarginalized"),
             },
           ]}
         >
@@ -319,6 +335,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredLanguage"),
             },
           ]}
         >
@@ -330,6 +347,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredReferral"),
             },
           ]}
         >
@@ -341,6 +359,7 @@ function MentorApplication({ email, role, onSubmitFailure, onSubmitSuccess }) {
           rules={[
             {
               required: true,
+              message: t("common.requiredSpecializations"),
             },
           ]}
         >
