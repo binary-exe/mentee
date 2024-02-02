@@ -153,9 +153,12 @@
     "requiredBriefIntro": "Please enter Brief Introduction",
     "requiredRegion":"Please enter Regions",
     "requiredDevelopmentGoals": "Please enter  Sustainable Development Goals Your Work Supports",
-    "requiredCheckbox":"Please check this field"
+    "requiredCheckbox":"Please check this field",
+    "requiredPartner": "Please select a Partner"
   },
   "commonApplication": {
+    "no-affiliation":"no-affiliation",
+    "partner":"If you are currently affiliated to a partner organization, please select it from the below list, or select no-affiliation.",
     "genderIdentification": "What do you identify as?",
     "lgbtq": "as LGBTQ+",
     "man": "as a man",

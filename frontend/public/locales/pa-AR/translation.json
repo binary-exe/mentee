@@ -153,9 +153,12 @@
     "requiredBriefIntro": "مهرباني وکړئ لنډه پیژندنه دننه کړئ",
     "requiredRegion":"مهرباني وکړئ سیمې ته ننوځئ",
     "requiredDevelopmentGoals": "مهرباني وکړئ د دوامدار پراختیا اهداف داخل کړئ چې ستاسو د کار ملاتړ کوي",
-    "requiredCheckbox":"مهرباني وکړئ دا ساحه وګورئ"
+    "requiredCheckbox":"مهرباني وکړئ دا ساحه وګورئ",
+    "requiredPartner": "مهرباني وکړئ یو شریک وټاکئ"
   },
   "commonApplication": {
+    "no-affiliation":"بې تړاو",
+    "partner":"که تاسو اوس مهال د یوې شریکې موسسې سره تړاو لرئ، مهرباني وکړئ دا د لاندې لیست څخه وټاکئ، یا غیر تړاو غوره کړئ.",
     "genderIdentification": "د جنسیت پیژندنه",
     "lgbtq": " LGBTQ+",
     "man": "سړی",

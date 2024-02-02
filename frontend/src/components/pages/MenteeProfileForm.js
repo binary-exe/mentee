@@ -49,6 +49,7 @@ function MenteeProfileForm({
   onSubmit,
   profileData,
   resetFields,
+  applicationData,
 }) {
   const { t, i18n } = useTranslation();
   const options = useSelector((state) => state.options);
@@ -195,7 +196,9 @@ function MenteeProfileForm({
     newData.image = image;
     newData.changedImage = changedImage;
     newData.edited = edited;
-
+    if (applicationData && applicationData.partner) {
+      newData.partner = applicationData.partner;
+    }
     onSubmit(newData);
   };
 
@@ -419,7 +422,13 @@ function MenteeProfileForm({
         <Switch>{t("menteeProfile.privateAccount")}</Switch>
       </Form.Item>
       <Form.Item>
-        <Button  id="submit" type="primary" htmlType="submit" block loading={loading}>
+        <Button
+          id="submit"
+          type="primary"
+          htmlType="submit"
+          block
+          loading={loading}
+        >
           {t("common.save")}
         </Button>
       </Form.Item>

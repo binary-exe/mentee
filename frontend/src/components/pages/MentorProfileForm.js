@@ -322,7 +322,6 @@ function MentorProfileForm({
           className={styles.formGroupItem}
           valuePropName="checked"
         >
-          {/* <Switch /> */}
           <Radio.Group>
             <Radio value={true}>{t("common.yes")}</Radio>
             <Radio value={false}>{t("common.no")}</Radio>
@@ -440,7 +439,13 @@ function MentorProfileForm({
         <Input addonBefore="URL" />
       </Form.Item>
       <Form.Item>
-        <Button id="submit"  type="primary" htmlType="submit" block loading={loading}>
+        <Button
+          id="submit"
+          type="primary"
+          htmlType="submit"
+          block
+          loading={loading}
+        >
           {t("common.save")}
         </Button>
       </Form.Item>

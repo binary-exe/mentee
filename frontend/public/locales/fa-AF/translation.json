@@ -155,9 +155,12 @@
     "requiredBriefIntro": "لطفاً معرفی مختصر را وارد کنید",
     "requiredRegion":"لطفا مناطق را وارد کنید",
     "requiredDevelopmentGoals": "لطفا اهداف توسعه پایدار که کار شما از آنها پشتیبانی می کند را وارد کنید",
-    "requiredCheckbox":"لطفا این فیلد را بررسی کنید"
+    "requiredCheckbox":"لطفا این فیلد را بررسی کنید",
+    "requiredPartner": "لطفا یک شریک انتخاب کنید"
   },
   "commonApplication": {
+    "no-affiliation":"عدم وابستگی",
+    "partner":"اگر در حال حاضر به یک سازمان شریک وابسته هستید، لطفاً آن را از لیست زیر انتخاب کنید یا بدون وابستگی را انتخاب کنید.",
     "genderIdentification": "شناسایی جنسیت",
     "lgbtq": "LGBTQ",
     "man": "مرد",

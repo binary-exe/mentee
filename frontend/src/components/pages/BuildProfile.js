@@ -119,6 +119,7 @@ function BuildProfile({ location, history }) {
             email={email}
             newProfile
             onSubmit={onSubmit}
+            applicationData={applicationData}
             loading={loading}
           />
         );

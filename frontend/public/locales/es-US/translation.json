@@ -152,9 +152,12 @@
     "requiredBriefIntro": "Por favor ingrese Breve Introducción",
     "requiredRegion":"Por favor ingrese Regiones",
     "requiredDevelopmentGoals": "Por favor ingrese los Objetivos de Desarrollo Sostenible que su trabajo apoya",
-    "requiredCheckbox":"Por favor revisa este campo"
+    "requiredCheckbox":"Por favor revisa este campo",
+    "requiredPartner": "Por favor seleccione un socio"
   },
   "commonApplication": {
+    "no-affiliation":"sin afiliación",
+    "partner":"Si actualmente está afiliado a una organización asociada, selecciónela de la lista a continuación o seleccione sin afiliación.",
     "genderIdentification": "¿Cómo te identificas?",
     "lgbtq": "LGBTQ",
     "man": "Hombre",
