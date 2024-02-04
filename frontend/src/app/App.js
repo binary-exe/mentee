@@ -66,7 +66,6 @@ function App() {
   }, [user]);
 
   useEffect(() => {
-    console.log("path change--------");
     setStartPathTime(new Date().getTime());
   }, [path]);
 
@@ -75,9 +74,6 @@ function App() {
   }, [i18n.language]);
 
   const cur_time = new Date().getTime();
-
-  console.log("role", role);
-  console.log("time", cur_time, startPathTime, cur_time - startPathTime);
 
   return (
     <>
