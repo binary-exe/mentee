@@ -77,7 +77,9 @@ export const login = async (email, password, role, path = undefined) =>
   }).then(async (data) => {
     if (data && data.success && data.result.token) {
       localStorage.setItem("role", role);
-      localStorage.setItem("login_path", path);
+      if (path) {
+        localStorage.setItem("login_path", path);
+      }
       await fireauth
         .auth()
         .signInWithCustomToken(data.result.token)
@@ -103,6 +105,7 @@ export const logout = async () => {
       console.error(message);
       return false;
     });
+  localStorage.removeItem("login_path");
 };
 
 export const refreshToken = async () => {
