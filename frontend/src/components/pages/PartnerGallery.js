@@ -146,28 +146,33 @@ function PartnerGallery(props) {
     />
   ) : (
     <>
-      {isHub ? (
-        <></>
-      ) : (
-        <>
-          <Affix offsetTop={10}>
-            <Button
-              onClick={() => setMobileFilterVisible(true)}
-              className={css`
-                display: none;
-                @media only screen and (max-width: 640px) {
-                  margin-top: 2%;
-                  margin-left: 2%;
-                  display: grid;
-                }
-              `}
-              type="primary"
-            >
-              {t("gallery.filter")}
-            </Button>
-          </Affix>
-          <Modal
-            onCancel={() => {
+      <Affix offsetTop={10}>
+        <Button
+          onClick={() => setMobileFilterVisible(true)}
+          className={css`
+            display: none;
+            @media only screen and (max-width: 640px) {
+              margin-top: 2%;
+              margin-left: 2%;
+              display: grid;
+            }
+          `}
+          type="primary"
+        >
+          {t("gallery.filter")}
+        </Button>
+      </Affix>
+      <Modal
+        onCancel={() => {
+          setMobileFilterVisible(false);
+        }}
+        open={mobileFilterVisible}
+        footer={[
+          <Button type="primary" onClick={() => setMobileFilterVisible(false)}>
+            {t("common.apply")}
+          </Button>,
+          <Button
+            onClick={() => {
               setMobileFilterVisible(false);
             }}
             open={mobileFilterVisible}
@@ -249,12 +254,5 @@ function PartnerGallery(props) {
     </>
   );
 }
-
-const styles = {
-  searchInput: {
-    borderRadius: 10,
-    marginBottom: 5,
-  },
-};
 
 export default PartnerGallery;
