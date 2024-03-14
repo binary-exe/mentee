@@ -253,6 +253,10 @@ export const Hubs = () => {
           the full url
         </p>
       </Form.Item>
+      <p>
+        ※Please only enter the name of the hub to be used in the URL and not the
+        full url
+      </p>
       <Button
         className={css`
           margin-top: 0px;
