@@ -7,6 +7,7 @@ import {
 import Sidebar from "./Sidebar";
 import { useTranslation } from "react-i18next";
 import { useAuth } from "utils/hooks/useAuth";
+import MeetingLinkButton from "./components/MeetingLinkButton"; // Import the button component
 
 function MenteeSidebar(props) {
   const { t } = useTranslation();
@@ -30,7 +31,15 @@ function MenteeSidebar(props) {
     },
   };
 
-  return <Sidebar pages={pages} selectedPage={props.selectedPage} />;
+  //return <Sidebar pages={pages} selectedPage={props.selectedPage} />;
+
+  return (
+    <Sidebar pages={pages} selectedPage={props.selectedPage}>
+      {/* Add the button to the sidebar content */}
+      <MeetingLinkButton />
+      {/* Your other sidebar content (if any) can go here */}
+    </Sidebar>
+  );
 }
 
 export default MenteeSidebar;
